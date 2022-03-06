@@ -39,3 +39,8 @@ Observable.of(1, 2, 3, 4, 5, 6, 7, 8, 9)
         print(Thread.isMainThread ? "Main Thread" : "Background Thread", ">> map")
         return num * 2
     }
+    .subscribe {
+//        print(Thread.isMainThread ? "Main Thread" : "Background Thread", ">> map")
+        print($0)
+    }
+    .disposed(by: bag)
